@@ -216,19 +216,15 @@ Check your Browserslist config to be sure that your targets are set up correctly
             </svg>
           </div>
           <div class="truncate">
-            <div class="flex items-center gap-1.5">
-              <span class="font-mono-tech text-[11px] sm:text-xs font-bold tracking-[0.16em] text-rose-500 uppercase">TESLA, INC.</span>
-              <span class="text-white/25 text-xs">|</span>
-              <span class="font-mono-tech text-[10px] sm:text-xs text-slate-300 tracking-wider">NASDAQ: TSLA</span>
+            <div class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+              <span class="font-mono-tech text-[10px] sm:text-xs font-bold tracking-[0.12em] sm:tracking-[0.16em] text-rose-500 uppercase">TESLA, INC.</span>
+              <span class="text-white/25 text-[10px] sm:text-xs">|</span>
+              <span class="font-mono-tech text-[9.5px] sm:text-xs text-slate-300 tracking-wide sm:tracking-wider">NASDAQ: TSLA</span>
             </div>
             <p class="text-[10px] sm:text-[11px] text-slate-400 truncate">BUSI4543 Corporate Finance · Team Portfolio</p>
           </div>
         </div>
 
-        <button id="btnExportHtml" type="button" class="px-2.5 sm:px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-[11px] font-medium text-slate-300 hover:text-white transition flex items-center gap-1 shrink-0" title="导出并保存最新HTML文件">
-          <svg class="w-3.5 h-3.5 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          <span>SAVE HTML</span>
-        </button>
       </div>
       <div class="tesla-laser-line"></div>
     </header>
@@ -283,8 +279,9 @@ Check your Browserslist config to be sure that your targets are set up correctly
 
     <!-- Minimalist Footer -->
     <footer class="py-2.5 px-3 text-center border-t border-white/5 bg-slate-950/50 backdrop-blur-md shrink-0">
-      <p class="font-mono-tech text-[9.5px] sm:text-[11px] text-slate-400 tracking-wider truncate">
-        UNNC BUSI4543 · YUHANG FAN · TIAN GAO · KAI HU · WOXUE LI · PEIYUAN QI
+      <p class="font-mono-tech text-[9.5px] sm:text-[11px] text-slate-400 tracking-wider">
+        <span class="sm:hidden">UNNC · BUSI4543 · TSLA TEAM</span>
+        <span class="hidden sm:inline">UNNC BUSI4543 · YUHANG FAN · TIAN GAO · KAI HU · WOXUE LI · PEIYUAN QI</span>
       </p>
     </footer>
   </div>
@@ -874,7 +871,8 @@ Check your Browserslist config to be sure that your targets are set up correctly
       reader.readAsDataURL(file);
     });
 
-    document.getElementById("btnExportHtml").addEventListener("click", () => {
+    const __exportBtn = document.getElementById("btnExportHtml");
+    if (__exportBtn) __exportBtn.addEventListener("click", () => {
       const cloneDoc = document.documentElement.cloneNode(true);
       const dView = cloneDoc.querySelector("#detailView");
       const hView = cloneDoc.querySelector("#homeView");
