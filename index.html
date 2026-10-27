@@ -329,7 +329,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
       <section class="cyber-glass rounded-2xl p-3.5 sm:p-5 border border-white/10">
         <div class="flex items-center gap-3.5 sm:gap-5">
           <!-- Avatar with photo upload trigger -->
-          <div class="relative group w-[72px] h-[101px] sm:w-[96px] sm:h-[134px] rounded-lg overflow-hidden border-2 border-rose-500/70 shadow-[0_0_20px_rgba(227,25,55,0.3)] shrink-0 bg-slate-950 cursor-pointer" id="detailAvatarWrap" title="点击更换个人照片">
+          <div class="relative group w-[72px] h-[101px] sm:w-[96px] sm:h-[134px] rounded-lg overflow-hidden border-2 border-rose-500/70 shadow-[0_0_20px_rgba(227,25,55,0.3)] shrink-0 bg-slate-950" id="detailAvatarWrap">
             <img id="detailMemberPhoto" src="" alt="Member Portrait" class="w-full h-full object-cover object-top" />
           </div>
 
@@ -388,7 +388,6 @@ Check your Browserslist config to be sure that your targets are set up correctly
   </div>
 
   <!-- Hidden Input for Replacing Member Portrait Photo -->
-  <input type="file" id="inputMemberPhoto" accept="image/*" class="hidden" />
 
   <!-- Minimalist Toast Notification -->
   <div id="toastBanner" class="fixed bottom-5 right-4 left-4 sm:left-auto z-50 view-hidden px-4 py-2.5 rounded-full bg-slate-900/95 border border-rose-500/50 text-xs font-medium text-white shadow-2xl flex items-center justify-center gap-2 backdrop-blur-md">
@@ -440,7 +439,6 @@ Check your Browserslist config to be sure that your targets are set up correctly
     // =========================================================================
     let currentBioMode = "original";
     let activeMemberIndex = 0;
-    let uploadTargetMemberIndex = null;
     let orbitAngleOffset = -90; // Top vertex start
 
     const TEAM_MEMBERS = [
@@ -601,19 +599,6 @@ Check your Browserslist config to be sure that your targets are set up correctly
         ]
       }
     ];
-
-    // Load persisted state if present in exported HTML
-    if (window.__PERSISTED_TEAM_STATE__) {
-      const st = window.__PERSISTED_TEAM_STATE__;
-      if (st.bioMode) currentBioMode = st.bioMode;
-      if (Array.isArray(st.members)) {
-        st.members.forEach((savedM, idx) => {
-          if (TEAM_MEMBERS[idx] && savedM.photo) {
-            TEAM_MEMBERS[idx].photo = savedM.photo;
-          }
-        });
-      }
-    }
 
     // =========================================================================
     // 3. TOAST HELPER
@@ -844,64 +829,6 @@ Check your Browserslist config to be sure that your targets are set up correctly
       if (e.key === "Escape" && !document.getElementById("detailView").classList.contains("view-hidden")) {
         returnToHomeRing(false);
       }
-    });
-
-    // =========================================================================
-    // 6. PHOTO REPLACEMENT & STANDALONE HTML EXPORT
-    // =========================================================================
-    document.getElementById("detailAvatarWrap").addEventListener("click", () => {
-      uploadTargetMemberIndex = activeMemberIndex;
-      const input = document.getElementById("inputMemberPhoto");
-      input.value = "";
-      input.click();
-    });
-
-    document.getElementById("inputMemberPhoto").addEventListener("change", (e) => {
-      const file = e.target.files && e.target.files[0];
-      if (!file || uploadTargetMemberIndex === null) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        const dataUrl = ev.target.result;
-        TEAM_MEMBERS[uploadTargetMemberIndex].photo = dataUrl;
-        renderOrbitView();
-        renderDetailSwitchGrid();
-        document.getElementById("detailMemberPhoto").src = dataUrl;
-        showToast(`Photo updated for ${TEAM_MEMBERS[uploadTargetMemberIndex].name}. Return to the home page and click SAVE HTML to keep the change.`);
-      };
-      reader.readAsDataURL(file);
-    });
-
-    const __exportBtn = document.getElementById("btnExportHtml");
-    if (__exportBtn) __exportBtn.addEventListener("click", () => {
-      const cloneDoc = document.documentElement.cloneNode(true);
-      const dView = cloneDoc.querySelector("#detailView");
-      const hView = cloneDoc.querySelector("#homeView");
-      if (dView) dView.classList.add("view-hidden");
-      if (hView) hView.classList.remove("view-hidden");
-
-      const oldStateScript = cloneDoc.querySelector("#persistedStateScript");
-      if (oldStateScript) oldStateScript.remove();
-
-      const statePayload = {
-        bioMode: currentBioMode,
-        members: TEAM_MEMBERS.map(m => ({ id: m.id, photo: m.photo }))
-      };
-      const stateScript = document.createElement("script");
-      stateScript.id = "persistedStateScript";
-      stateScript.textContent = "window.__PERSISTED_TEAM_STATE__ = " + JSON.stringify(statePayload) + ";";
-      cloneDoc.querySelector("head").appendChild(stateScript);
-
-      const serializedHtml = "<!DOCTYPE html>\n" + cloneDoc.outerHTML;
-      const blob = new Blob([serializedHtml], { type: "text/html;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "BUSI4543_Tesla_Team_Interactive_Portfolio.html";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      showToast("Exported a standalone HTML file with the latest photo.");
     });
 
     // =========================================================================
