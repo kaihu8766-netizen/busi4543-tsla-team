@@ -23,6 +23,12 @@ p{margin:8px 0;}
 section.slide{margin-bottom:6px;}
 details{margin:12px 0;background:#fff;border:1px solid #d7dee8;border-radius:6px;padding:10px 14px;}
 summary{cursor:pointer;font-weight:600;color:#365A7E;}
+/* Keep the original table flow for print; scrolling applies on screen only. */
+.timing-table-scroll{display:contents;}
+@media screen {
+  .timing-table-scroll{display:block;max-width:100%;overflow-x:auto;}
+  .timing-table-scroll:focus-visible{outline:2px solid #365A7E;outline-offset:2px;}
+}
 table{border-collapse:collapse;width:100%;margin:12px 0;background:#fff;}
 th,td{border:1px solid #d7dee8;padding:8px 10px;text-align:left;font-size:14.5px;}
 th{background:#eef2f7;}
@@ -50,20 +56,21 @@ th{background:#eef2f7;}
 <h1><strong>Workshop 3 Speaker Script: Tesla, Inc. (NASDAQ: TSLA)</strong></h1>
 <p class="subtitle">Group 5 — The Investment Case  |  Thursday 19 November 2026, 14:00, YANG Fujia 224</p>
 <p class="note"><em>Bilingual working version: English script first, Chinese translation after each section. The Chinese is for group review only and will be removed for the final stage version.</em></p>
-<p class="note"><em>双语工作版：每部分先英文讲稿，后中文翻译。中文仅供小组内部审阅，最终上台版本将改为全英文。</em></p>
+<p lang="zh-CN" class="note"><em>双语工作版：每部分先英文讲稿，后中文翻译。中文仅供小组内部审阅，最终上台版本将改为全英文。</em></p>
 <p class="download"><a href="downloads/busi4543-workshop3-tesla-script.docx">Download the full script (DOCX, English + Chinese)</a></p>
 
 <h2>How to use this script</h2>
 <p>Framing: we present as equity analysts, recommending the investment case for Tesla to ordinary investors — the general public. The goal is to attract investment, not to give a neutral information share. Every section therefore answers one question: why does this support investing? Total speaking time is 20 minutes, followed by 10 minutes of questions. Each of the four presenters speaks for exactly 5 minutes: Hu Kai (opening, option pricing, close), Gao Tian (business and strategy, Tesla real options), Fan Yuhang (governance, real options framework) and Qi Peiyuan (risk and return, valuation direction). Li Woxue is a group member and does not present in this workshop. Timings assume a speaking rate of about 130 words per minute, including short pauses when slides change. Read the English text as written; the Chinese translation is a meaning-for-meaning review aid, not a second script to read aloud.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>使用说明：定位：我们以证券分析师的身份，向普通投资者，也就是大众，推荐特斯拉的投资理由。目标是吸引投资，而不是中性的信息分享。因此每一部分都回答一个问题：这为什么支持投资？总讲述时间为 20 分钟，之后有 10 分钟问答。四位讲者每人正好讲 5 分钟：胡凯（开场、期权定价、收尾）、高天（业务与战略、特斯拉实物期权）、范宇航（公司治理、实物期权框架）、齐培源（风险与回报、估值方向）。李沃学为小组成员，本次工作坊不做讲述。时间按每分钟约 130 个英文单词估算，已包含换页时的短暂停顿。请按英文文本照稿讲；中文翻译是逐义对应的审阅辅助，不需要朗读。</p>
 </details>
 <p>Delivery cautions: (1) Ownership is stated on one consistent basis — the lecture basis, under which Musk&#x27;s holding of about 28.4% includes restricted performance awards. Do not introduce any other holding figure. (2) No team-computed figures appear in this presentation: no regression beta, no WACC, no DCF value and no position sizing. Use only the simple public figures given in the script (revenue, ownership, Cybertruck sales) and the course worked examples. Do not add any rating label or target price, and do not add a sized position. (3) Do not add mergers and acquisitions, dividend policy or financing topics — they have not been taught before this workshop.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>讲述提醒：（1）持股只使用一个一致口径，即讲义口径，该口径下马斯克约 28.4% 的持股包含受限业绩奖励，不要引入任何其他持股数字。（2）本次展示不出现任何小组自行计算的数字：没有回归贝塔、没有 WACC、没有 DCF 估值、没有仓位比例。只使用讲稿中给出的简单公开数字（收入、股权、Cybertruck 销量）和课程例题。不要加入任何评级标签或目标价，也不要加入带具体比例的仓位。（3）不要加入并购、股利政策或融资主题，这些内容在本工作坊之前尚未讲授。</p>
 </details>
 
 <h2 id="timing">Timing and speaker map</h2>
+<div class="timing-table-scroll" role="region" aria-labelledby="timing" tabindex="0">
 <table>
 <thead>
 <tr><th><strong>Slide</strong></th><th><strong>Time</strong></th><th><strong>Duration</strong></th><th><strong>Speaker</strong></th><th><strong>Approx. words (EN)</strong></th></tr>
@@ -85,6 +92,7 @@ th{background:#eef2f7;}
 <tr><td><strong>Total</strong></td><td><strong>0:00–20:00</strong></td><td><strong>20 min</strong></td><td><strong>4 speakers × 5 min</strong></td><td><strong>2316</strong></td></tr>
 </tbody>
 </table>
+</div>
 <p class="note"><em>English word total: 2316 words for 20 minutes (about 116 words per minute).</em></p>
 
 <section class="slide" id="slide-1">
@@ -92,7 +100,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Hu Kai  |  Time: 0:00–0:45  |  Duration: 45 seconds  |  English: about 76 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Good afternoon, everyone. We are Group 5. Today we present the investment case for Tesla, for ordinary investors. If you are wondering whether Tesla is worth your money, here is our case. Tesla is one of the most argued-about stocks in the market. Some investors value it as a car maker. Others value it as an energy and AI company. In the next twenty minutes, we will show you why we think Tesla is worth considering.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>各位下午好，我们是 Group 5。今天想跟各位普通投资者聊聊 Tesla 的投资逻辑。如果你正在琢磨 Tesla 到底值不值得投钱，接下来就是我们的看法。Tesla 是市场上争议最大的股票之一：有的投资者按车企给它估值，也有人把它当成一家能源和 AI 公司。接下来的二十分钟里，我们会带大家看看，为什么我们觉得 Tesla 值得考虑。</p>
 </details>
 </section>
@@ -101,7 +109,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Hu Kai  |  Time: 0:45–1:30  |  Duration: 45 seconds  |  English: about 97 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Our thesis is simple: Tesla&#x27;s value is shifting from cars to options. Three points. First, revenue diversification — energy, services and software as a second engine. Second, growth at scale — cost leadership defends share in a price war. Third, strategic option value — FSD, Optimus and Dojo: the upside the price is paying for. In one sentence: Tesla is not only a carmaker. It is a scalable platform combining technology, energy and software. Today each section answers one question for you: why should an ordinary investor consider owning the stock? Gao Tian starts with the business.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>我们的核心观点很简单：Tesla 的价值重心正在从卖车转向期权。具体分三点。第一，营收多元化——能源、服务和软件正在成为第二增长引擎。第二，规模化增长——靠成本领先在价格战里守住市场份额。第三，战略期权价值——FSD、Optimus 和 Dojo，这些才是现在的股价真正买单的上行空间。用一句话总结：Tesla 不只是一家车企，它更是一个把技术、能源和软件结合在一起的可扩展平台。今天每个部分都会回答你一个问题：为什么普通投资者应该考虑持有这只股票？下面先由 Gao Tian 来讲业务部分。</p>
 </details>
 </section>
@@ -110,7 +118,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Gao Tian  |  Time: 1:30–3:00  |  Duration: 90 seconds  |  English: about 198 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>I will cover the first two core thesis, starting with revenue diversification, because diversification is the first reason to invest. Cars are still the largest part of Tesla&#x27;s business, creating a clear risk: demand, pricing and production are all connected to one product cycle. Public figures show the scale and shift. Total revenue is 94,827 million dollars, with automotive services at 82,056 million dollars, and energy already contributing 12,771 million dollars. Energy generation, storage, and software are becoming a genuine second engine, not a side project. That matters for corporate finance, not just for strategy, because a more diversified revenue base should be less exposed to a single product downturn, giving management more than one way to deploy capital and generate cash. The second is growth with operating scale. Deliveries, production capacity and cost control show whether Tesla can turn volume into cash flow, rather than simply selling more cars. In a price war, scale is only an advantage if unit costs fall faster than prices. That is our test in the next slide. Keep the basic picture in mind: the car business funds the platform, and the platform creates earnings diversification, which is what investors are buying.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>我来负责前两个核心论点，先说营收多元化，因为这就是我们投资的第一个理由。目前汽车依然是 Tesla 最大的业务板块，这也带来了一个很明显的风险：需求、定价和生产全都绑在单一产品周期上。不过公开数据已经能看出它的体量和转型趋势。公司总营收为 94,827 百万美元，其中含服务在内的汽车业务占 82,056 百万美元，而能源业务已经贡献了 12,771 百万美元。发电与储能、服务和软件正在成为真正的第二引擎，而不是可有可无的副业。这不只是战略层面的事，在公司金融里同样很关键——营收结构越多元，受单一产品下行的冲击就越小，管理层在配置资本和创造现金流时也有更多选择。第二个论点是伴随经营规模的增长。交付量、产能和成本控制，决定了 Tesla 能不能把销量转化成实实在在的现金流，而不只是多卖几辆车。在价格战里，只有当单位成本降得比售价更快时，规模才算优势，下一页我们就会检验这一点。大家先记住这个基本逻辑：核心造车业务给平台输血，而平台带来的多元化盈利能力，才是投资者真正要买的东西。</p>
 </details>
 </section>
@@ -119,7 +127,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Gao Tian  |  Time: 3:00–4:30  |  Duration: 90 seconds  |  English: about 213 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>This slide shows why scale supports investing, even in a price war. Tesla has cut prices to defend market share, against BYD and established multinational carmakers, and that pressure is real. Using five forces language, rivalry is intense, buyers have more alternatives than before, and new entrants from China compete on cost. Our reading: this is where Tesla&#x27;s defence matters: cost leadership and automation, not brand alone. A producer building at lower unit cost can live with lower prices longer than rivals and then protect volume. Scale also spreads fixed costs, supports the charging and service network, and generates cash that funds the next growth areas. The offset sits in energy, services and software. Energy is already a material revenue line, as the previous slide showed, and services and software attach to every car sold, so each vehicle enlarges a recurring base rather than adding only a one-off sale. The investment point is simple: an investor is not buying one car cycle. They are buying a scaled producer whose cost position defends the core, while second engines reduce dependence on that core. I will go back later for the Tesla real options case. Next, Fan Yuhang will look at who controls the company, and why that risk can be monitored rather than feared.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>这一页要说明的是，为什么哪怕在价格战里，规模依然能支撑投资逻辑。为了守住市场份额，Tesla 一直在降价应对 BYD 和老牌跨国车企，这种竞争压力是实打实的，我们没必要回避。用五力模型的角度来看，行业内部竞争非常激烈，买家的选择比以前多得多，而且来自中国的新入局者主要拼的就是成本。我们的判断是，这恰恰体现了 Tesla 护城河的价值：靠的是成本领先和自动化，而不只是品牌。单位成本更低的厂商，能比对手更久地扛住低价，从而保住销量。同时，规模还能摊薄固定成本，支撑充电和服务网络运转，并源源不断产生现金，去喂养下一个增长点。对冲压力的另一端，就是能源、服务和软件。上一页我们看到，能源已经是相当可观的收入来源；而服务和软件会跟着每卖出一辆车一起落地，所以每卖一台车不只是做一锤子买卖，而是在扩大持续收费的用户基数。投资逻辑其实很简单：你买的不是一轮汽车周期，而是一家规模化的制造企业——它的成本地位能守住基本盘，第二引擎又在不断降低对基本盘的依赖。待会儿我会回来讲 Tesla 的实物期权案例。接下来由 Fan Yuhang 带大家看看公司到底由谁掌控，以及为什么这项风险是可监控的，不用过度恐慌。</p>
 </details>
 </section>
@@ -128,7 +136,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Fan Yuhang  |  Time: 4:30–6:15  |  Duration: 105 seconds  |  English: about 203 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Governance is the slide where a tough investor should push us hardest. So let&#x27;s be direct. It&#x27;s a risk you can watch. It&#x27;s not a veto. Here are the ownership numbers from our course materials. At the end of June 2026, institutions held 43.1 percent. The public held 28.3 percent. Insiders held 28.5 percent. Inside that, Elon Musk is about 28.4 percent, on the basis we use in the lectures. That basis includes restricted performance awards. Keep it in mind; we use it all the way through. So why does this matter to an investor? In agency terms, Tesla&#x27;s problem isn&#x27;t the usual one. Most companies worry about scattered shareholders and weak owners. Tesla has the opposite: one insider with a lot of power. His interests carry real weight. But they don&#x27;t always match outside shareholders. And there&#x27;s an upside. When a big insider holds a lot of stock, the leader&#x27;s own wealth moves with the share price. The checks are visible. Seven of the nine directors are independent. There&#x27;s a compensation committee. So formal monitoring does exist. The next slide asks: is that enough? Share pledging, the pay award case, key person risk. And why none of it makes us walk away.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>公司治理这一页，是最该被较真投资者追问的地方。那我们就直说。这是一项可以盯住的风险，不是一票否决。先看课程材料里的持股数据。截至 2026 年 6 月底，机构持股 43.1%。公众持股 28.3%。内部人持股 28.5%。其中，按课上采用的口径，Elon Musk 约占 28.4%。这个口径包含限制性绩效奖励。这个口径大家记住，我们后面全程都用它。那这跟投资者有什么关系？从代理问题说，Tesla 的麻烦不是常见的那种。大多数公司担心的是股东太散、没人管得住管理层。Tesla 正好相反：公司里有一位权力很大的内部人。他的诉求很有分量。但它并不总和外部股东一致。当然也有好的一面。内部人持股多，掌舵人的个人财富就跟着股价走。制衡是看得见的。九名董事里有七名是独立董事。还设了薪酬委员会。所以正式的监督是存在的。下一页我们就问：这些够不够？股票质押、薪酬方案诉讼、关键人物风险。以及为什么这些都不至于让我们放弃。</p>
 </details>
 </section>
@@ -137,7 +145,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Fan Yuhang  |  Time: 6:15–8:00  |  Duration: 105 seconds  |  English: about 218 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Three facts drive the governance debate. Each has a takeaway for investors. Fact one: Musk has pledged about 207.5 million shares. Pledging ties his borrowing to the share price. So a sharp fall can trigger margin calls and forced selling, right when the market is already falling. But this is disclosed, so a holder can watch it. Fact two: the Delaware court struck down the 56 billion dollar pay award. Tesla then moved its incorporation to Texas. And Musk has argued for around 25 percent voting control. Yet Tesla has no dual class structure. Real voting power still comes from shares people actually hold. The courts stepped in. Votes followed ownership. That&#x27;s the system pushing back, and it should give outside investors some comfort. Fact three: key person risk. Musk&#x27;s time is split across other ventures, including xAI and SpaceX. And Tesla leans on one person more than most. Our view is balanced. These are real agency costs. They belong in the risk assessment. And they&#x27;re a reason to size a holding and keep watching it. But they&#x27;re not an automatic veto. The exposures are disclosed. The board is something you can check. And the market already knows all this. Next, Qi Peiyuan takes us to risk and return, and to what beta tells us about this stock.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>围绕公司治理的争论，主要靠三个事实撑着。每一个都有投资上的含义。第一，Musk 质押了大约 2.075 亿股。质押把他的借款和股价绑在一起。所以股价一大跌，就可能触发追加保证金、被迫卖出，而且正好赶上市场在跌。但这是公开披露的，持股人可以盯着。第二，Delaware 法院否决了那笔 560 亿美元的薪酬方案。Tesla 随后把注册地迁到了 Texas。而 Musk 一直主张要拿到大约 25% 的投票控制权。可 Tesla 没有双重股权结构。真正的投票权还是跟着实际持股走。法院出手了。投票权跟着持股走。这就是制度在往回顶，应该能让外部投资者安心一点。第三是关键人物风险。Musk 的精力分散在别的公司上，包括 xAI 和 SpaceX。而 Tesla 对一个人的依赖比多数公司更重。我们的看法是平衡的。这些是实打实的代理成本。必须写进风险评估。也是我们要控制仓位、持续盯着的理由。但它们不是自动否决。这些敞口是公开的。董事会是你查得到的。而市场其实早就知道这些。接下来，由 Qi Peiyuan 讲风险与收益，还有贝塔到底能告诉我们什么。</p>
 </details>
 </section>
@@ -146,7 +154,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Qi Peiyuan  |  Time: 8:00–9:45  |  Duration: 105 seconds  |  English: about 183 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Now, let&#x27;s look at risk. The key point on this slide is that beta measures market risk, and only market risk. Beta is the slope of a stock&#x27;s excess returns against the market&#x27;s excess returns. In simple terms, beta tells us how strongly Tesla moves when the market moves. If beta is above one, the stock has tended to move more than the market. If beta is below one, it has tended to move less. But we should remember that beta is only an estimate. It is not a perfect or fixed number. So, we should use beta as a guide to market sensitivity. There is also another type of risk: firm-specific risk. For Tesla, this includes execution, competition, governance, and headlines. The important difference is that firm-specific risk can be reduced by diversification. We can do this by holding a spread of different stocks instead of only one. So, Tesla may be a volatile stock, but that does not mean we should completely avoid it. The key is to hold it as one part of a diversified portfolio, not our whole savings.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>接下来我们看看风险。这一页的核心要点是：贝塔衡量的是市场风险，而且只衡量市场风险。贝塔是一只股票的超额收益对市场超额收益回归的斜率。简单来说，贝塔告诉我们大盘波动的时候，Tesla 通常会跟着波动多剧烈。如果贝塔大于 1，说明这只股票的波动幅度往往比大盘更大；如果小于 1，说明波动幅度比大盘小。但我们要记住，贝塔只是一个估算值，它不是一个完美或固定不变的数字，所以只能把它当作衡量市场敏感度的参考。除此之外还有另一类风险：公司特有风险。对 Tesla 来说，这包括执行力、市场竞争、公司治理以及各种新闻舆论。关键的区别在于，公司特有风险是可以通过分散投资来降低的——只要我们同时持有一篮子不同的股票，而不是只押注一只就行。所以，Tesla 确实可能是一只波动很大的股票，但这并不意味着我们要完全避开它。关键在于把它当成多元化投资组合里的一部分，而不是把全部身家都押上去。</p>
 </details>
 </section>
@@ -155,7 +163,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Qi Peiyuan  |  Time: 9:45–11:30  |  Duration: 105 seconds  |  English: about 205 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Now, let&#x27;s move from beta to CAPM and the hurdle rate. The main idea is simple: risk must be paid for. The CAPM formula on the slide is: E(R) = Rf + beta × [E(Rm) − Rf]. Here, Rf is the risk-free rate. It is the return we can get for taking no market risk. Beta measures market sensitivity. When beta is higher, the market risk premium is also higher. So, if an investment has more market risk, investors should require a higher return. This leads us to the idea of a hurdle rate. The cost of capital combines the cost of equity with the after-tax cost of debt. This cost of capital becomes the hurdle rate for a project. A project creates value only when its expected return is above this hurdle. So, a higher-risk project needs to generate a higher return. This is important for Tesla because it is a volatile growth company. Tesla faces a high hurdle, so its growth plans need to earn enough return to pay for the risk. This is the discipline behind our recommendation: higher risk is not a reason to reject a stock, as long as the expected return is high enough to compensate for that risk.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>现在，我们从贝塔进一步讲到 CAPM 和门槛收益率。核心思路很简单：承担风险就必须有回报来补偿。幻灯片上的 CAPM 公式是：E(R) = Rf + 贝塔 × [E(Rm) − Rf]。这里的 Rf 是无风险利率，也就是不承担市场风险就能拿到的回报。贝塔衡量市场敏感度，贝塔越高，市场风险溢价也就越高。所以，如果一项投资承担的市场风险更大，投资者就应该要求更高的回报。这就引出了门槛收益率的概念。加权平均资本成本把股权成本和税后债务成本结合在了一起，而这个加权平均资本成本就成了一个项目的门槛收益率。只有当项目的预期回报高于这道门槛收益率时，它才算创造价值。因此，风险越高的项目，就越需要产生更高的回报。这一点对 Tesla 尤其重要，因为它是一家高波动的成长型公司。Tesla 面临很高的门槛收益率，所以它的各项扩张计划必须赚到足够的回报，才能抵消对应的风险。这正是我们投资建议背后的纪律：高风险本身不是拒绝一只股票的理由，只要它的预期回报高到足以补偿这份风险就行。</p>
 </details>
 </section>
@@ -164,7 +172,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Hu Kai  |  Time: 11:30–13:30  |  Duration: 120 seconds  |  English: about 187 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>As we just showed, Tesla faces a high hurdle rate. Its growth plans have to create serious value to pay for that risk. That leads to our next question: how do we value future projects when they are still full of uncertainty? If a company had to invest all its money on day one and could never change its mind, a high hurdle rate would kill almost every new idea. Fortunately, business decisions do not work like that. And in Topic 3, we learned the tool for this: options. Think about how a financial option works. When you hold an option, you have the right to act later, but you do not have to. If things go well, you step in and capture the upside. If things go badly, you simply walk away, and your loss stops at your initial cost. Because the downside is capped while the upside stays open, uncertainty takes on a new role. Big swings in possible outcomes actually make the option more valuable, because the good outcomes can be huge. Yuhang will now show how this logic applies to real investment decisions.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>正如我们刚才讲的，Tesla 面临很高的门槛收益率，它的增长计划必须创造出足够大的价值，才能覆盖这份风险。这就引出了我们的下一个问题：当未来的新项目还充满不确定性时，我们该怎么评估它们的价值？如果一家公司必须在第一天就把所有钱一次性砸进去、而且再也不能反悔，那这么高的门槛收益率几乎会否掉所有新想法。好在真实的商业决策并不是这样运作的。在 Topic 3 里，我们正好学了解决这个问题的工具：期权。大家可以回想一下金融期权是怎么运作的。当你持有期权时，你有权利在以后采取行动，但并没有义务非做不可。如果进展顺利，你就跟进投入、拿走上行收益；如果情况不好，你直接放弃就行，损失也就停在一开始的投入上。正因为下行风险被封住、而上行空间敞开，不确定性就有了全新的作用：结果波动越大，期权反而越值钱，因为一旦成了，回报会非常可观。接下来，Yuhang 会讲讲这套逻辑是怎么用到真实投资决策里的。</p>
 </details>
 </section>
@@ -173,7 +181,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Fan Yuhang  |  Time: 13:30–15:00  |  Duration: 90 seconds  |  English: about 199 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Think of a real option as the same idea, applied to a project. Management can change course as new information comes in. That flexibility is upside an investor pays for. We covered three types. An expansion option means a project with a negative net present value today can still be worth doing. Why? Because it buys you the right to expand later. A delay option means an exclusive right, like a patent, has value even when investing now doesn&#x27;t pay. And it rises with volatility. An abandonment option means the right to stop. When cash flows disappoint, you cap the downside. The project is worth more. But options aren&#x27;t magic, and Campusteria proves it. The pilot restaurant had a net present value of negative 21,916 dollars and 84 cents. Its expansion option was worth only 718 dollars and 3 cents. So the answer was still no. Now compare the drug patent. Investing now gives a negative net present value of about 150 million dollars. Yet the seventeen year patent, as a delay option, is still worth 37.12 million dollars. The framework is simple. Find the option. Price it. Then decide. Gao Tian will now run that sequence on Tesla.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>实物期权你可以理解成同一套思路，用在具体项目上。新信息一来，管理层就能调整方向。这份灵活性就是投资者愿意付钱的上行空间。我们讲了三种。扩张期权是说，一个项目今天净现值是负的，也照样可能值得做。为什么？因为它买到了以后扩张的权利。延迟期权是说，像专利这样的排他性权利，就算现在投不划算也有价值。而且波动率越高越值钱。放弃期权是说，你有权停手。现金流不如预期时，你就封住了下行风险。项目反而更值钱。但期权不是魔法，Campusteria 就证明了这一点。那家试点餐厅的净现值是负 21,916.84 美元。它的扩张期权只值 718.03 美元。所以结论还是不做。再对比一下医药专利。现在就投，净现值大约是负 1.5 亿美元。但那项 17 年的专利作为延迟期权，依然值 3,712 万美元。框架很简单。先找出期权。给它定价。然后做决定。接下来 Gao Tian 会把这个顺序用到 Tesla 上。</p>
 </details>
 </section>
@@ -182,7 +190,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Gao Tian  |  Time: 15:00–17:00  |  Duration: 120 seconds  |  English: about 236 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Now let’s apply the framework to a recent business decision that supports our investment view. Tesla is shutting down Cybertruck production and expanding Cybercab capacity. Cybertruck sales in the United States fell from about 39,000 units in 2024 to about 20,000 in 2025, far below the earlier expectation of 250,000 units a year. In November, Musk said remaining unfilled orders would be completed first, then the production line taken apart. We can see this as the company exercising an abandonment option. The important point, stressed by the course case, is that sunk costs should not decide this. Money already spent on the Cybertruck line is gone either way. The correct comparison is the incremental value of continuing Cybertruck production against converting capacity to Cybercab. A management team willing to drop a flagship product rather than defend sunk costs is protecting capital, which reassure the investors. On the other side, Cybercab, Self-Driving, Optimus and Dojo are expansion and delay options. The Black-Scholes mapping is direct: S is the present value of the cash flows, E is the conversion or investment cost, t is the time before a decision is due, and sigma is the volatility of those cash flows. High uncertainty is exactly what gives these projects big option value. If you wait until the outcome is certain, most of that upside will already be priced in. Next, Qi Peiyuan will show what that means for valuation.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>现在我们把这套框架用到一个正在发生、并且能支撑投资逻辑的真实决策上。Tesla 正在逐步关停 Cybertruck 的生产，同时把产能扩向 Cybercab，背后的数字很说明问题。Cybertruck 在美国的销量从 2024 年的大约 39,000 辆掉到了 2025 年的大约 20,000 辆，远低于早先每年 250,000 辆的预期。11 月的时候 Musk 表示，会先把剩下的未交付订单做完，然后拆掉这条产线。我们可以把这看作一次正在行权的放弃期权。正如课程案例反复强调的，沉没成本不应该决定这个选择——以前砸在 Cybertruck 产线上的钱，不管怎样都已经花出去了。真正该对比的，是继续生产 Cybertruck 的增量价值，和扣除改造费用与风险后把产能转给 Cybercab 的价值。一个愿意果断砍掉旗舰产品、而不是死守沉没成本的管理层，是在真正保护资本，这应该能让投资者更放心。另一边，Cybercab、Full Self-Driving、Optimus 和 Dojo 则属于扩张期权和延迟期权。它们跟 Black-Scholes 模型的对应关系非常直接：S 是未来现金流的现值，E 是产线改造或投入成本，t 是必须做出决策前的剩余时间，sigma 则是这些现金流的波动率。高不确定性恰恰是这些项目能带有巨大期权价值的原因。投资者现在买进股票，就相当于把这些期权握在手里，而不是等到结果完全明朗、价值已经被市场涨完之后再进场。接下来，Qi Peiyuan 会讲讲这对估值意味着什么。</p>
 </details>
 </section>
@@ -191,7 +199,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Qi Peiyuan  |  Time: 17:00–18:30  |  Duration: 90 seconds  |  English: about 209 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>Finally, let&#x27;s look at our valuation direction. The key question is: Why is Tesla&#x27;s price so high? If we value Tesla only by selling cars, the price is difficult to explain. But we think this is the wrong test. The slide shows two parts of Tesla&#x27;s value. First, we have the car business today. Tesla is already selling cars, and it also has energy and services that are operating and generating cash. Second, we have options that are not yet at scale. These include Robotaxi and FSD, Optimus, energy, and software. The market price is not only paying for the businesses Tesla has today. It is also paying for the possibility that these future businesses become much bigger. Of course, these businesses are still uncertain. But this is where the options idea becomes important. An option gives us a right, not an obligation. If these businesses succeed, there can be significant upside. If they do not, investors can choose to exit. So, uncertainty itself can add value. This is why being early can beat waiting for proof. Our point is not that all these future businesses will definitely succeed. Our point is that the Tesla price reflects both its current business and the potential value of these future options.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>最后，我们来看看估值方向。核心问题是：Tesla 的股价为什么这么高？如果只按卖车来给 Tesla 估值，这个价格确实很难解释。但我们认为这种检验标准用错了。幻灯片把 Tesla 的价值拆成了两部分。第一部分是现在的汽车主业：Tesla 已经在卖车了，而且还有正在运营并产生现金流的能源和服务业务。第二部分是还没有放量的期权，包括 Robotaxi 和 FSD、Optimus、能源以及软件。市场给的这个价格，不只是在为 Tesla 今天已经有的业务买单，更是在为这些未来业务做大做强的可能性买单。当然，这些业务目前都还有不确定性。但恰恰在这里，期权的思路变得非常关键。期权给我们的是一种权利，而不是义务。如果这些业务成功了，上行空间会非常可观；如果不成功，投资者也可以选择离场。所以，不确定性本身反而能带来价值，这也是为什么早一步进场往往胜过苦等尘埃落定。我们的意思并不是说这些未来业务一定全都会成功，而是说 Tesla 的股价同时反映了它现有的业务，以及这些未来期权的潜在价值。</p>
 </details>
 </section>
@@ -200,7 +208,7 @@ th{background:#eef2f7;}
 <p class="meta"><strong>Speaker: Hu Kai  |  Time: 18:30–20:00  |  Duration: 90 seconds  |  English: about 92 words</strong></p>
 <p class="label"><strong>English script</strong></p>
 <p>To close, our three points again. One: diversification, scale, and options. Energy, services and software are a second engine. Cost leadership and automation defend share. And there is option value beyond today&#x27;s cars. Two: risks are understood, not hidden. Governance and market risk are real. But they are disclosed, monitorable, and priced into the decision. Three: how to look at Tesla. Look beyond next quarter&#x27;s deliveries and ask whether today&#x27;s price fairly reflects the long-term option value in autonomy, robotics, and energy storage. Thank you. We are happy to take your questions.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>最后，我们再把三个要点收个尾。第一：多元化、规模效应与期权。能源、服务和软件构成了第二增长引擎；成本领先和自动化守住了市场份额；此外还有超越现有汽车业务的期权价值。第二：风险是看得清、不遮掩的。公司治理风险和市场风险确实存在，但它们都是公开披露、可以持续跟踪，并且已经计入决策考量的。第三：该怎么看 Tesla。不妨跳出下个季度的交付数字，去思考现在的股价是不是合理反映了自动驾驶、机器人和储能背后的长期期权价值。谢谢大家，现在欢迎各位提问。</p>
 </details>
 </section>
@@ -210,28 +218,28 @@ th{background:#eef2f7;}
 <div class="qa">
 <p><strong>Q1. Does Musk&#x27;s governance problem overturn the investment thesis?</strong></p>
 <p>A: No. The agency costs and key person risk are real. Pledged shares, the pay award case, and his attention split across other ventures. But those exposures are disclosed, so you can track them. The board has independent directors. And the courts and the voting rules have visibly pushed back. So we treat governance as a risk to size and watch. Not as a veto on a business and an options case that are both strong.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>问：马斯克的治理问题会不会推翻投资论点？答：不会。代理成本和关键人物风险确实存在。股票质押、薪酬方案诉讼，还有精力分散在别的公司。但这些敞口是公开披露的，你可以跟踪。董事会里有独立董事。法院和投票规则也明显往回顶了。所以我们把治理当成需要控制仓位、持续盯着的风险。而不是一票否决——毕竟业务和期权这两块逻辑都很强。</p>
 </details>
 </div>
 <div class="qa">
 <p><strong>Q2. Is the valuation simply too expensive on a car-only view?</strong></p>
 <p>A: On a car-only view it always looks expensive. But that&#x27;s the wrong test. The gap between the car business alone and the market price is the options question. It&#x27;s not a reason to walk away. What you&#x27;re paying for is robotaxis, Full Self-Driving, Optimus, energy and software. Whether that&#x27;s fair depends on their odds of success, their timing and their volatility. And with option-like payoffs, getting in early can matter more than waiting for certainty.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>问：只按汽车业务看，估值是不是太贵了？答：只按卖车算，它总是显得贵。但这个标准本身就用错了。纯汽车业务的价值和市场价格之间的差，正是期权的问题。这不是放弃的理由。你付的价钱买的是 robotaxis、Full Self-Driving、Optimus、能源和软件。这笔钱值不值，取决于它们成功的概率、落地时间和波动率。而且在期权式的收益结构里，进场早往往比等到一切确定更重要。</p>
 </details>
 </div>
 <div class="qa">
 <p><strong>Q3. How should we use beta when it is only an estimate?</strong></p>
 <p>A: Use it for what it measures, and nothing more. Beta measures market sensitivity. So as an ordinary investor, it tells you roughly how hard your holding will move with the market, and what return that sensitivity demands. What it doesn&#x27;t measure is firm specific risk. And that&#x27;s the part you can diversify away. Used that way, beta is a handy guide to pricing risk. Not a precise fact. And not, on its own, a reason to reject the stock.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>问：贝塔只是一个估计值，该怎么用？答：它衡量什么，就用它看什么，别多用力。贝塔衡量的是市场敏感度。所以作为普通投资者，它告诉你手里的持仓大概会跟着大盘波动多大，以及这份敏感度要求多高的回报。它衡量不了的是公司特有风险。而这部分，分散投资就能化解。这么用的话，贝塔是个好用的风险定价参考。它不是精确的事实。单靠它，也不足以否定一只股票。</p>
 </details>
 </div>
 <div class="qa">
 <p><strong>Q4. Will competition from BYD and the price war keep hurting the car business?</strong></p>
 <p>A: That pressure is real, and we don&#x27;t hide it. Our point is this. Cost leadership, automation and scale let Tesla live with lower prices for longer than rivals. That protects volume and keeps the cash coming. And energy, services and software keep adding a growing offset. So competition is a reason the moat matters. Not a reason the investment case fails.</p>
-<details><summary>中文翻译</summary>
+<details lang="zh-CN"><summary>中文翻译</summary>
 <p>问：比亚迪的竞争和价格战会不会继续伤到汽车业务？答：这份压力是真的，我们不藏。我们的意思是：成本领先、自动化和规模，让 Tesla 能比对手更长时间扛住低价。这样就保住了销量，也保住了现金。同时能源、服务和软件还在不断加厚对冲。所以竞争激烈，恰恰说明护城河重要。而不是投资逻辑不成立的理由。</p>
 </details>
 </div>
